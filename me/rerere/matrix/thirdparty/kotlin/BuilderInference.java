@@ -1,0 +1,25 @@
+package me.rerere.matrix.thirdparty.kotlin;
+
+import java.lang.annotation.ElementType;
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+import java.lang.annotation.Target;
+import me.rerere.matrix.thirdparty.kotlin.annotation.AnnotationRetention;
+import me.rerere.matrix.thirdparty.kotlin.annotation.AnnotationTarget;
+import me.rerere.matrix.thirdparty.kotlin.annotation.Retention;
+import me.rerere.matrix.thirdparty.kotlin.annotation.Target;
+import me.rerere.matrix.thirdparty.kotlin.experimental.ExperimentalTypeInference;
+
+@Target(allowedTargets = {AnnotationTarget.VALUE_PARAMETER, AnnotationTarget.FUNCTION, AnnotationTarget.PROPERTY})
+@Retention(AnnotationRetention.BINARY)
+@Retention(RetentionPolicy.CLASS)
+@Target({ElementType.METHOD, ElementType.PARAMETER})
+@SinceKotlin(version = "1.3")
+@ExperimentalTypeInference
+public @interface BuilderInference {}
+
+
+/* Location:              C:\Users\Administrator\Desktop\Matrix_7.0.0_alpha28(3)(1).jar!\me\rerere\matrix\thirdparty\kotlin\BuilderInference.class
+ * Java compiler version: 6 (50.0)
+ * JD-Core Version:       1.1.3
+ */

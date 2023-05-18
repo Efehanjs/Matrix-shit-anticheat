@@ -1,0 +1,42 @@
+package me.rerere.matrix.thirdparty.com.google.gson.internal.bind;
+
+import java.io.IOException;
+import me.rerere.matrix.thirdparty.com.google.gson.TypeAdapter;
+import me.rerere.matrix.thirdparty.com.google.gson.stream.JsonReader;
+import me.rerere.matrix.thirdparty.com.google.gson.stream.JsonToken;
+import me.rerere.matrix.thirdparty.com.google.gson.stream.JsonWriter;
+
+public final class TypeAdapters$3 extends TypeAdapter {
+  public Boolean read(JsonReader paramJsonReader) throws IOException {
+    JsonToken jsonToken = paramJsonReader.peek();
+    try {
+      if (jsonToken == JsonToken.NULL) {
+        paramJsonReader.nextNull();
+        return null;
+      } 
+    } catch (IOException iOException) {
+      throw a(null);
+    } 
+    try {
+      if (jsonToken == JsonToken.STRING)
+        return Boolean.valueOf(Boolean.parseBoolean(paramJsonReader.nextString())); 
+    } catch (IOException iOException) {
+      throw a(null);
+    } 
+    return Boolean.valueOf(paramJsonReader.nextBoolean());
+  }
+  
+  public void write(JsonWriter paramJsonWriter, Boolean paramBoolean) throws IOException {
+    paramJsonWriter.value(paramBoolean);
+  }
+  
+  private static IOException a(IOException paramIOException) {
+    return paramIOException;
+  }
+}
+
+
+/* Location:              C:\Users\Administrator\Desktop\Matrix_7.0.0_alpha28(3)(1).jar!\me\rerere\matrix\thirdparty\com\google\gson\internal\bind\TypeAdapters$3.class
+ * Java compiler version: 6 (50.0)
+ * JD-Core Version:       1.1.3
+ */
